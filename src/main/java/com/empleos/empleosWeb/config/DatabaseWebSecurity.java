@@ -43,6 +43,7 @@ public class DatabaseWebSecurity extends WebSecurityConfigurerAdapter {
         .antMatchers(
                 "/bootstrap/**",                        
                 "/images/**",
+		"/imagenes/**",
                 "/tinymce/**",
                 "/logos/**").permitAll()
         
