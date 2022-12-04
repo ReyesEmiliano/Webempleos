@@ -19,7 +19,7 @@ import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "Usuarios")
+@Table(name = "railway.Usuarios")
 public class Usuario {
 
 	@Id
