@@ -30,7 +30,7 @@ public class CategoriasController {
 		serviceCategorias.guardar(categoria);
 		atributo.addFlashAttribute("msg", "Categoria guardada con exito");
 
-		return "redirect:/categorias/indexPaginate";
+		return "redirect:/Categorias/indexPaginate";
 
 	}
 
@@ -38,7 +38,7 @@ public class CategoriasController {
 	public String eliminar(@RequestParam("id") int idCategoria, RedirectAttributes atributo) {
 		serviceCategorias.eliminar(idCategoria);
 		atributo.addFlashAttribute("msg", "Categoria eliminada");
-		return "redirect:/categorias/indexPaginate";
+		return "redirect:/Categorias/indexPaginate";
 	}
 
 	@GetMapping("/crear")
@@ -50,7 +50,7 @@ public class CategoriasController {
 	public String mostrarIndexPaginadoCat(Model model, Pageable page) {
 		Page<Categoria> lista = serviceCategorias.buscarTodas(page);
 		model.addAttribute("categorias", lista);
-		return "categorias/listCategorias";
+		return "Categorias/listCategorias";
 	}
 
 	@GetMapping("/index")
